@@ -2,6 +2,7 @@ import { StyledButton } from "./Button.styled";
 
 export interface ButtonProps {
   type: string;
+  onClick: () => void;
 }
 
 export enum ButtonTypes {
@@ -9,9 +10,9 @@ export enum ButtonTypes {
   DENY = "deny",
 }
 
-function Button({ type }: ButtonProps) {
+function Button({ type, onClick }: ButtonProps) {
   return (
-    <StyledButton type={type} href="#">
+    <StyledButton type={type} onClick={onClick} href="#">
       {type === ButtonTypes.APPROVE ? "Approve" : "Deny"}
     </StyledButton>
   );

@@ -9,6 +9,10 @@ import { StyledImageReview } from "./ImageReview.styled";
 import { useDispatch, useSelector } from "react-redux";
 import { ApplicationState } from "../../types/ApplicationState";
 import { getRandomImage } from "../../services/getRandomImageService";
+import {
+  approveImage,
+  denyImage,
+} from "../../state/action-creators/reviewImage";
 
 function ImageReview() {
   const activeImage = useSelector(
@@ -18,6 +22,16 @@ function ImageReview() {
   const dispatch = useDispatch();
 
   const onGetRandomPhoto = () => {
+    getRandomImage(dispatch);
+  };
+
+  const onClickApprove = () => {
+    approveImage(activeImage.id);
+    getRandomImage(dispatch);
+  };
+
+  const onClickDeny = () => {
+    denyImage(activeImage.id);
     getRandomImage(dispatch);
   };
 
@@ -51,8 +65,8 @@ function ImageReview() {
       {activeImage.id && <hr />}
 
       <div className="buttons-container">
-        <Button type={ButtonTypes.APPROVE} />
-        <Button type={ButtonTypes.DENY} />
+        <Button type={ButtonTypes.APPROVE} onClick={onClickApprove} />
+        <Button type={ButtonTypes.DENY} onClick={onClickDeny} />
       </div>
 
       {!activeImage.id && <Description />}
