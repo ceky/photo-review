@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledImageReview = styled.main`
+  position: relative;
+
   p {
     text-transform: uppercase;
   }
@@ -16,6 +18,7 @@ export const StyledImageReview = styled.main`
 
   .background {
     width: calc(100% - 2rem);
+    height: 350px;
     margin: 1rem;
     background-color: #eeece0;
 
@@ -27,7 +30,7 @@ export const StyledImageReview = styled.main`
   .current-photo {
     width: 100%;
     height: 100%;
-    max-height: 350px;
+    height: 350px;
     object-fit: contain;
   }
 

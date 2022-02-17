@@ -11,6 +11,7 @@ import {
   denyImage,
 } from "../../state/action-creators/reviewImage";
 import { useEffect } from "react";
+import Spinner from "../Spinner/Spinner";
 
 function ImageReview() {
   const activeImage = useSelector(
@@ -45,14 +46,14 @@ function ImageReview() {
   return (
     <StyledImageReview>
       <div className={`background ${activeImage.id ? "none" : ""}`}>
-        {activeImage.id && (
+        {activeImage.id && !activeImage.isLoading && (
           <img
             src={activeImage.url}
             className="current-photo"
             alt="Current Image"
           />
         )}
-        {!activeImage.id && (
+        {!activeImage.id && !activeImage.isLoading && (
           <img
             src={plusIcon}
             className="add-image-button"
@@ -61,6 +62,8 @@ function ImageReview() {
           />
         )}
       </div>
+
+      {activeImage.isLoading && <Spinner />}
 
       {activeImage.id && (
         <Credits
