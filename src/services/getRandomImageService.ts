@@ -1,11 +1,11 @@
-import axios from "axios";
-import { Dispatch } from "react";
+import axios from 'axios';
+import { Dispatch } from 'react';
 import {
   fetchRandomImage,
   fetchRandomImageSuccess,
-} from "../state/action-creators/fetchImages";
+} from '../state/action-creators/fetchImages';
 
-import { GET_RANDOM_IMAGE_URL } from "./urls";
+import { GET_RANDOM_IMAGE_URL } from './urls';
 
 export function getRandomImage(dispatch: Dispatch<any>) {
   dispatch(fetchRandomImage());

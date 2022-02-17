@@ -1,10 +1,10 @@
-import { ReviewedImages } from "../../types/ReviewdImagesType";
+import { ReviewedImages } from '../../types/ReviewdImagesType';
 import {
   ApproveImageAction,
   APPROVE_IMAGE,
   DenyImageAction,
   DENY_IMAGE,
-} from "../action-creators/reviewImage";
+} from '../action-creators/reviewImage';
 
 const initialState: ReviewedImages = {
   approvedImages: [],

@@ -1,6 +1,6 @@
-import { StyledButton } from "./Button.styled";
-import approveIcon from "../../assets/check-icon.svg";
-import denyIcon from "../../assets/close-icon.svg";
+import { StyledButton } from './Button.styled';
+import approveIcon from '../../assets/check-icon.svg';
+import denyIcon from '../../assets/close-icon.svg';
 
 export interface ButtonProps {
   type: string;
@@ -9,8 +9,8 @@ export interface ButtonProps {
 }
 
 export enum ButtonTypes {
-  APPROVE = "approve",
-  DENY = "deny",
+  APPROVE = 'approve',
+  DENY = 'deny',
 }
 
 function Button({ type, disabled, onClick }: ButtonProps) {

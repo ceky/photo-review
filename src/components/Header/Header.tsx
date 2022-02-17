@@ -1,4 +1,4 @@
-import { StyledHeader } from "./Header.styled";
+import { StyledHeader } from './Header.styled';
 
 function Header() {
   return <StyledHeader>IMAGE APPROVAL</StyledHeader>;

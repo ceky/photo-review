@@ -1,5 +1,5 @@
-import { StyledDescription } from "./Description.styled";
-import plusIcon from "../../../assets/plus-icon.svg";
+import { StyledDescription } from './Description.styled';
+import plusIcon from '../../../assets/plus-icon.svg';
 
 function Description() {
   return (

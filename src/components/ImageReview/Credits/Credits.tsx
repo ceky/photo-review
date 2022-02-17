@@ -1,4 +1,4 @@
-import { StyledCredits } from "./Credits.styled";
+import { StyledCredits } from './Credits.styled';
 
 interface CreditsProps {
   currentUsername: string;

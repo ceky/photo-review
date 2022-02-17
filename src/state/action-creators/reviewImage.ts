@@ -1,5 +1,5 @@
-export const APPROVE_IMAGE = "NETWORK/APPROVE_IMAGE";
-export const DENY_IMAGE = "NETWORK/DENY_IMAGE";
+export const APPROVE_IMAGE = 'NETWORK/APPROVE_IMAGE';
+export const DENY_IMAGE = 'NETWORK/DENY_IMAGE';
 
 export type ApproveImageAction = {
   type: typeof APPROVE_IMAGE;

@@ -1,17 +1,17 @@
-import plusIcon from "../../assets/plus-icon.svg";
-import Button, { ButtonTypes } from "../Button/Button";
-import Credits from "./Credits/Credits";
-import Description from "./Description/Description";
-import { StyledImageReview } from "./ImageReview.styled";
-import { useDispatch, useSelector } from "react-redux";
-import { ApplicationState } from "../../types/ApplicationState";
-import { getRandomImage } from "../../services/getRandomImageService";
+import plusIcon from '../../assets/plus-icon.svg';
+import Button, { ButtonTypes } from '../Button/Button';
+import Credits from './Credits/Credits';
+import Description from './Description/Description';
+import { StyledImageReview } from './ImageReview.styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { ApplicationState } from '../../types/ApplicationState';
+import { getRandomImage } from '../../services/getRandomImageService';
 import {
   approveImage,
   denyImage,
-} from "../../state/action-creators/reviewImage";
-import { useEffect } from "react";
-import Spinner from "../Spinner/Spinner";
+} from '../../state/action-creators/reviewImage';
+import { useEffect } from 'react';
+import Spinner from '../Spinner/Spinner';
 
 function ImageReview() {
   const activeImage = useSelector(
@@ -45,7 +45,7 @@ function ImageReview() {
 
   return (
     <StyledImageReview>
-      <div className={`background ${activeImage.id ? "none" : ""}`}>
+      <div className={`background ${activeImage.id ? 'none' : ''}`}>
         {activeImage.id && !activeImage.isLoading && (
           <img
             src={activeImage.url}

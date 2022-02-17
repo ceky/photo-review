@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { ButtonProps, ButtonTypes } from "./Button";
+import styled, { css } from 'styled-components';
+import { ButtonProps, ButtonTypes } from './Button';
 
 export const StyledButton = styled.a`
   padding: 1rem;
@@ -10,6 +10,12 @@ export const StyledButton = styled.a`
   display: block;
   text-align: center;
   text-decoration: none;
+  transition: all 200ms;
+
+  &:hover {
+    box-shadow: 3px 3px 3px 1px rgb(0 0 0 / 40%);
+    transform: scale(1.05);
+  }
 
   ${(props: ButtonProps) =>
     props.type === ButtonTypes.APPROVE &&

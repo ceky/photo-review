@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
-import { ApplicationState } from "../../types/ApplicationState";
-import { StyledApprovedImages } from "./ApprovedImages.styled";
-import Flickity from "react-flickity-component";
+import { useSelector } from 'react-redux';
+import { ApplicationState } from '../../types/ApplicationState';
+import { StyledApprovedImages } from './ApprovedImages.styled';
+import Flickity from 'react-flickity-component';
 
 function ApprovedImages() {
   const flickityOptions = {

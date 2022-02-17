@@ -1,16 +1,16 @@
-import { ImageType } from "../../types/ImageType";
+import { ImageType } from '../../types/ImageType';
 import {
   FetchRandomImageAction,
   FetchRandomImageSuccessAction,
   FETCH_RANDOM_IMAGE,
   FETCH_RANDOM_IMAGE_SUCCESS,
-} from "../action-creators/fetchImages";
+} from '../action-creators/fetchImages';
 
 const initialState: ImageType = {
-  id: "",
-  name: "",
-  url: "",
-  username: "",
+  id: '',
+  name: '',
+  url: '',
+  username: '',
   isLoading: false,
 };
 

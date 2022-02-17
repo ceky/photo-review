@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import rootReducer from "./reducers/index";
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers/index';
 
 const persistedState = {
-  reviewedImages: JSON.parse(localStorage.getItem("reviewedImages")!),
+  reviewedImages: JSON.parse(localStorage.getItem('reviewedImages')!),
 };
 
 export const store = createStore(
@@ -14,7 +14,7 @@ export const store = createStore(
 
 store.subscribe(() => {
   localStorage.setItem(
-    "reviewedImages",
+    'reviewedImages',
     JSON.stringify(store.getState().reviewedImages)
   );
 });
