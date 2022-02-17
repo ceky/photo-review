@@ -16,7 +16,6 @@ export const StyledImageReview = styled.main`
 
   .background {
     width: calc(100% - 2rem);
-    height: 400px;
     margin: 1rem;
     background-color: #eeece0;
 
@@ -28,6 +27,7 @@ export const StyledImageReview = styled.main`
   .current-photo {
     width: 100%;
     height: 100%;
+    max-height: 350px;
     object-fit: contain;
   }
 
@@ -42,5 +42,6 @@ export const StyledImageReview = styled.main`
   .buttons-container {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 0.8rem;
   }
 `;

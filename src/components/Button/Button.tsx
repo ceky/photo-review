@@ -1,4 +1,6 @@
 import { StyledButton } from "./Button.styled";
+import approveIcon from "../../assets/check-icon.svg";
+import denyIcon from "../../assets/close-icon.svg";
 
 export interface ButtonProps {
   type: string;
@@ -13,7 +15,11 @@ export enum ButtonTypes {
 function Button({ type, onClick }: ButtonProps) {
   return (
     <StyledButton type={type} onClick={onClick} href="#">
-      {type === ButtonTypes.APPROVE ? "Approve" : "Deny"}
+      {type === ButtonTypes.APPROVE ? (
+        <img src={approveIcon} className="approve-icon" />
+      ) : (
+        <img src={denyIcon} className="deny-icon" />
+      )}
     </StyledButton>
   );
 }

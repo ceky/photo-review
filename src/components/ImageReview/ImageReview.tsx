@@ -69,8 +69,6 @@ function ImageReview() {
         />
       )}
 
-      {activeImage.id && <hr />}
-
       {activeImage.id && (
         <div className="buttons-container">
           <Button type={ButtonTypes.APPROVE} onClick={onClickApprove} />

@@ -5,6 +5,7 @@ export const StyledButton = styled.a`
   padding: 1rem;
   border-radius: 2rem;
   width: 100%;
+  height: 18px;
   max-width: 200px;
   display: block;
   text-align: center;
@@ -13,14 +14,24 @@ export const StyledButton = styled.a`
   ${(props: ButtonProps) =>
     props.type === ButtonTypes.APPROVE &&
     css`
-      background-color: green;
+      background-color: #46c046;
       color: white;
     `}
 
   ${(props: ButtonProps) =>
     props.type === ButtonTypes.DENY &&
     css`
-      background-color: red;
+      background-color: #ff3b3b;
       color: white;
     `}
+
+  .approve-icon {
+    width: 32px;
+    margin-top: -6px;
+  }
+
+  .deny-icon {
+    width: 40px;
+    margin-top: -10px;
+  }
 `;
