@@ -10,9 +10,9 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 14px;
-    margin: 0;
-    margin-bottom: 0.4rem;
-    background-color: #F9DF74;
+    margin: 0 auto;
+    background-color: rgb(249, 223, 116);
+    max-width: 600px;
   }
 `;
 
