@@ -11,10 +11,10 @@ export type DenyImageAction = {
   payload: string;
 };
 
-export const approveImage = (id: string) => {
+export const approveImage = (url: string) => {
   return {
     type: APPROVE_IMAGE,
-    payload: id,
+    payload: url,
   };
 };
 

@@ -33,7 +33,7 @@ function ImageReview() {
   };
 
   const onClickApprove = () => {
-    dispatch(approveImage(activeImage.id));
+    dispatch(approveImage(activeImage.url));
     getRandomImage(dispatch);
   };
 
