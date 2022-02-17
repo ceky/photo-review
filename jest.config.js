@@ -1,6 +1,7 @@
 module.exports = {
-  testRegex: '((\\.|/*.)(spec))\\.js?$',
+  testRegex: '((\\.|/*.)(spec))\\.(ts|tsx)?$',
   moduleNameMapper: {
-    '^.+\\.(css|less)$': '<rootDir>/src/mock/CSSStub.js',
+    '^.+\\.svg$': '<rootDir>/src/mock/SVGStub.js',
   },
+  testEnvironment: 'jsdom',
 };

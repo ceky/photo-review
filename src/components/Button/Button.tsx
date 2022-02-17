@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyledButton } from './Button.styled';
 import approveIcon from '../../assets/check-icon.svg';
 import denyIcon from '../../assets/close-icon.svg';
@@ -17,9 +18,9 @@ function Button({ type, disabled, onClick }: ButtonProps) {
   return (
     <StyledButton type={type} onClick={onClick} disabled={disabled} href="#">
       {type === ButtonTypes.APPROVE ? (
-        <img src={approveIcon} className="approve-icon" />
+        <img src={approveIcon} className="approve-icon" alt="Approve" />
       ) : (
-        <img src={denyIcon} className="deny-icon" />
+        <img src={denyIcon} className="deny-icon" alt="Deny" />
       )}
     </StyledButton>
   );
