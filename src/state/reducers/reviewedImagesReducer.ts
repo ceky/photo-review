@@ -1,3 +1,4 @@
+import { ReviewedImages } from "../../types/ReviewdImagesType";
 import {
   ApproveImageAction,
   APPROVE_IMAGE,
@@ -5,14 +6,14 @@ import {
   DENY_IMAGE,
 } from "../action-creators/reviewImage";
 
-const initialState = {
+const initialState: ReviewedImages = {
   approvedImages: [],
   deniedImages: [],
 };
 
 type ActionTypes = ApproveImageAction | DenyImageAction;
 
-const reducer = (state = initialState, action: ActionTypes) => {
+const reducer = (state: ReviewedImages = initialState, action: ActionTypes) => {
   switch (action.type) {
     case APPROVE_IMAGE:
       return {

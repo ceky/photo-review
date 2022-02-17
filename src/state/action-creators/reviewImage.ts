@@ -20,7 +20,7 @@ export const approveImage = (id: string) => {
 
 export const denyImage = (id: string) => {
   return {
-    type: APPROVE_IMAGE,
+    type: DENY_IMAGE,
     payload: id,
   };
 };

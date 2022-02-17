@@ -1,7 +1,4 @@
-import axios from "axios";
-import { useState } from "react";
 import plusIcon from "../../assets/plus-icon.svg";
-import { GET_RANDOM_IMAGE_URL } from "../../services/urls";
 import Button, { ButtonTypes } from "../Button/Button";
 import Credits from "./Credits/Credits";
 import Description from "./Description/Description";
@@ -26,12 +23,12 @@ function ImageReview() {
   };
 
   const onClickApprove = () => {
-    approveImage(activeImage.id);
+    dispatch(approveImage(activeImage.id));
     getRandomImage(dispatch);
   };
 
   const onClickDeny = () => {
-    denyImage(activeImage.id);
+    dispatch(denyImage(activeImage.id));
     getRandomImage(dispatch);
   };
 
@@ -64,10 +61,12 @@ function ImageReview() {
 
       {activeImage.id && <hr />}
 
-      <div className="buttons-container">
-        <Button type={ButtonTypes.APPROVE} onClick={onClickApprove} />
-        <Button type={ButtonTypes.DENY} onClick={onClickDeny} />
-      </div>
+      {activeImage.id && (
+        <div className="buttons-container">
+          <Button type={ButtonTypes.APPROVE} onClick={onClickApprove} />
+          <Button type={ButtonTypes.DENY} onClick={onClickDeny} />
+        </div>
+      )}
 
       {!activeImage.id && <Description />}
     </StyledImageReview>
