@@ -11,6 +11,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: 14px;
     margin: 0;
+    margin-bottom: 0.4rem;
+    background-color: #F9DF74;
   }
 `;
 

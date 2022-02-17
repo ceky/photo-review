@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledApprovedImages = styled.div`
   p {
-    text-transform: uppercase;
+    font-weight: bold;
     padding: 0 1rem;
   }
 
