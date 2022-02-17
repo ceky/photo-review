@@ -10,13 +10,23 @@ import {
   approveImage,
   denyImage,
 } from "../../state/action-creators/reviewImage";
+import { useEffect } from "react";
 
 function ImageReview() {
   const activeImage = useSelector(
     (state: ApplicationState) => state.activeImage
   );
+  const deniedImages = useSelector(
+    (state: ApplicationState) => state.reviewedImages.deniedImages
+  );
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (deniedImages.includes(activeImage.id)) {
+      getRandomImage(dispatch);
+    }
+  }, [activeImage.id]);
 
   const onGetRandomPhoto = () => {
     getRandomImage(dispatch);
