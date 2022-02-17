@@ -13,8 +13,8 @@ function ApprovedImages() {
   );
 
   const renderImages = () =>
-    approvedImages.map((imageUrl) => (
-      <img src={imageUrl} className="scrollable-image" />
+    approvedImages.map((imageUrl, key) => (
+      <img src={imageUrl} className="scrollable-image" key={key} />
     ));
 
   return (

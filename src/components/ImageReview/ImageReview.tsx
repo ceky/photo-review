@@ -25,22 +25,22 @@ function ImageReview() {
 
   useEffect(() => {
     if (deniedImages.includes(activeImage.id)) {
-      getRandomImage(dispatch);
+      dispatch(getRandomImage());
     }
   }, [activeImage.id]);
 
   const onGetRandomPhoto = () => {
-    getRandomImage(dispatch);
+    dispatch(getRandomImage());
   };
 
   const onClickApprove = () => {
     dispatch(approveImage(activeImage.url));
-    getRandomImage(dispatch);
+    dispatch(getRandomImage());
   };
 
   const onClickDeny = () => {
     dispatch(denyImage(activeImage.id));
-    getRandomImage(dispatch);
+    dispatch(getRandomImage());
   };
 
   return (

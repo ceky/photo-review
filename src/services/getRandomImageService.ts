@@ -7,11 +7,10 @@ import {
 
 import { GET_RANDOM_IMAGE_URL } from './urls';
 
-export function getRandomImage(dispatch: Dispatch<any>) {
+export const getRandomImage = () => async (dispatch: Dispatch<any>) => {
   dispatch(fetchRandomImage());
 
-  return axios.get(GET_RANDOM_IMAGE_URL).then((response) => {
-    const activeImage = response.data;
-    dispatch(fetchRandomImageSuccess(activeImage));
-  });
-}
+  const response = await axios.get(GET_RANDOM_IMAGE_URL);
+
+  dispatch(fetchRandomImageSuccess(response.data));
+};
