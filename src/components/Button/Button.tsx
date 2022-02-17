@@ -4,6 +4,7 @@ import denyIcon from "../../assets/close-icon.svg";
 
 export interface ButtonProps {
   type: string;
+  disabled?: boolean;
   onClick: () => void;
 }
 
@@ -12,9 +13,9 @@ export enum ButtonTypes {
   DENY = "deny",
 }
 
-function Button({ type, onClick }: ButtonProps) {
+function Button({ type, disabled, onClick }: ButtonProps) {
   return (
-    <StyledButton type={type} onClick={onClick} href="#">
+    <StyledButton type={type} onClick={onClick} disabled={disabled} href="#">
       {type === ButtonTypes.APPROVE ? (
         <img src={approveIcon} className="approve-icon" />
       ) : (

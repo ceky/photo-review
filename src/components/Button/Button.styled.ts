@@ -25,6 +25,13 @@ export const StyledButton = styled.a`
       color: white;
     `}
 
+  ${(props: ButtonProps) =>
+    props.disabled &&
+    css`
+      opacity: 0.3;
+      cursor: initial;
+    `}
+
   .approve-icon {
     width: 32px;
     margin-top: -6px;

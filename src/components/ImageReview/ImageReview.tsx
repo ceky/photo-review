@@ -71,8 +71,16 @@ function ImageReview() {
 
       {activeImage.id && (
         <div className="buttons-container">
-          <Button type={ButtonTypes.APPROVE} onClick={onClickApprove} />
-          <Button type={ButtonTypes.DENY} onClick={onClickDeny} />
+          <Button
+            type={ButtonTypes.APPROVE}
+            disabled={activeImage.isLoading}
+            onClick={onClickApprove}
+          />
+          <Button
+            type={ButtonTypes.DENY}
+            disabled={activeImage.isLoading}
+            onClick={onClickDeny}
+          />
         </div>
       )}
 
